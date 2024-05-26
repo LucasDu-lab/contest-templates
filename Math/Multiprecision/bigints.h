@@ -29,6 +29,29 @@ struct bign{
 		}
 		return false;
 	}
+    bool operator <(const bign other){
+		if(len<other.len){
+			return true;
+		}
+		for(int i=max(len,other.len)-1;i>=0;i--){
+			if(nums[i]!=other.nums[i]){
+				return nums[i]<other.nums[i];
+			}
+		}
+		return false;
+	}
+    bool operator ==(const bign other){
+        return nums==other.nums&&len==other.len;
+    }
+    bool operator<=(const bign other){
+        return *this<other||*this==other;
+    }
+    bool operator>=(const bign other){
+        return *this>other||*this==other;
+    }
+    bool operator!=(const bign other){
+        return !(*this==other);
+    }
     bign operator +(const bign other){
         bign res;
         res.len=max(len,other.len);
@@ -51,6 +74,27 @@ struct bign{
     }
     bign operator +=(const bign other){
         bign t=*this+other;
+        nums=t.nums;
+        len=t.len;
+        return t;
+    }
+    bign operator -(const bign b){
+        bign res;
+        res.len=max(len,b.len);
+        for(int i=0;i<res.len;i++){
+            if(nums[i]<b.nums[i]){
+                nums[i+1]--;
+                nums[i]+=10;
+            }
+            res.nums[i]=nums[i]-b.nums[i];
+        }
+        while(res.nums[res.len-1]==0&&res.len>1){
+            res.len--;
+        }
+        return res;
+    }
+    bign operator -=(const bign b){
+        bign t=*this-b;
         nums=t.nums;
         len=t.len;
         return t;
