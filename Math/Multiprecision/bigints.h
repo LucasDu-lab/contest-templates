@@ -99,6 +99,26 @@ struct bign{
         len=t.len;
         return t;
     }
+    bign operator++(int) {
+        bign temp("1");
+        *this += temp;
+        return *this; // for prefix increment
+    }
+
+    bign& operator++() {
+        *this += bign("1");
+        return *this;
+    }
+    bign operator--(int) {
+        bign temp("1");
+        *this -= temp;
+        return *this; // for prefix decrement
+    }
+
+    bign& operator--() {
+        *this -= bign("1");
+        return *this;
+    }
 };
 ostream& operator << (ostream &out,bign a){
 	reverse(a.nums.begin(),a.nums.begin()+a.len);
