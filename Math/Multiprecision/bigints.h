@@ -99,6 +99,30 @@ struct bign{
         len=t.len;
         return t;
     }
+    bign operator *(const bign b) {
+      bign c;  
+      c.len=b.len;  
+      for (int i = 0; i <b.len+len; ++i) {
+        for (int j = 0; j <= i; ++j) c.nums[i] += nums[j] * b.nums[i - j];
+    
+        if (c.nums[i] >= 10) {
+          c.nums[i + 1] += c.nums[i] / 10;
+          c.nums[i] %= 10;
+          c.len++;
+        }
+      }
+      while(c.nums[c.len-1]==0&&c.len>1){
+          //c.nums.pop_back();
+          c.len--;
+      }
+      return c;
+    }
+    bign operator *=(const bign b){
+        bign t=(*this)*b;
+        nums=t.nums;
+        len=t.len;
+        return t;
+    }
     bign operator++(int) {
         bign temp("1");
         *this += temp;
@@ -126,6 +150,13 @@ ostream& operator << (ostream &out,bign a){
 		out<<a.nums[i];	
 	}
 	return out;
+}
+istream& operator >> (istream &in,bign &a){
+    string t;
+    cin>>t;
+    bign b(t);
+    a=b;
+    return in;
 }
 void s2big(string s,bign &b){
 	b.len=s.size();
