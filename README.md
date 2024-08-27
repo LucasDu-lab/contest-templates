@@ -1,4 +1,48 @@
-# contest-templates
- A repository containing useful templates in C++      
- 
+# Contest Templates
+
+A collection of useful C++ templates for competitive programming and algorithmic contests. This repository aims to provide a solid foundation for solving common problems efficiently.
+
+## Features
+
+- **Data Structures**: Implementations of essential data structures such as:
+  - Disjoint Set Union (Union-Find)
+
+- **Algorithms**: Common algorithms for various problem-solving scenarios, including:
+  - Extended Euclidean Algorithm (exgcd)
+  - Algorithms for Prime Factorization and sieve algorithms
+
+- **Utilities**: Handy utility functions for:
+  - Input/Output operations for int128
+  - BigInteger operations
+  - Modular operations
+  - Fast IO
+
+## Getting Started
+
+### Prerequisites
+
+- A C++ compiler (e.g., g++, clang++)
+- CMake for building the project (optional)
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/LucasDu-lab/contest-templates.git
+   ```
+2. Navigate to the repository directory:
+    ```bash
+    cd contest-templates
+    ```
+## Usage
+Include headers like this:
+```cpp
+#include "int128.h"
+//the rest of the code
+```
+Refer to the documentation and individual header files for more information.
+## Contributing
+Contributions are welcome! If you have suggestions for improvements or additional templates, please create a discussion, create a pull request or open an issue.
+## License
+This project is licensed under the MIT License. See the </LICENSE> file for details.
  Link to repository: <https://github.com/LucasDu-lab/contest-templates>
