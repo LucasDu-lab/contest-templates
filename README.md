@@ -22,6 +22,7 @@ A collection of useful C++ templates for competitive programming and algorithmic
 ### Prerequisites
 
 - A C++ compiler (e.g., g++, clang++)
+- A C++ integrated development environment (e.g., Visual Studio Code, Visual Studio, Code::Blocks, Sublime Text, etc.)
 - CMake for building the project (optional)
 
 ### Installation
@@ -44,5 +45,5 @@ Refer to the documentation and individual header files for more information.
 ## Contributing
 Contributions are welcome! If you have suggestions for improvements or additional templates, please create a discussion, create a pull request or open an issue.
 ## License
-This project is licensed under the MIT License. See the </LICENSE> file for details.
+This project is licensed under the MIT License. See the </LICENSE> file for details.          
  Link to repository: <https://github.com/LucasDu-lab/contest-templates>
