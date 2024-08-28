@@ -1,0 +1,89 @@
+<html lang="en-US">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <style>
+           
+            pre{
+                text-align:left;
+                margin-left:auto;
+                margin-right:auto;
+            }
+        </style>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <meta name="description" content="documentation of the contest-templates repository">
+        <title>Documentation</title>
+    </head>
+    <body>
+        <header>
+            <!--<h1>Documentation</h1>-->
+            <nav class="navbar navbar-expand-sm">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="../index.html">Home</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                        <ul class="navbar-nav me-auto">
+                          <li class="nav-item">
+                            <a class="nav-link active" href="#">Link</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link active" href="templates.html">Premium templates</a>
+                          </li>
+                          <li class="nav-item dropdown active">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Docs</a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="math.html">Math</a></li>
+                              <li><a class="dropdown-item" href="ds.html">Data Structures</a></li>
+                              <li><a class="dropdown-item" href="io.html">IO Utiity</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                        <form class="d-flex">
+                          <select class="form-select" name="color" id="color">
+                            <option value="light">Light Mode</option>
+                            <option value="dark">Dark Mode</option>
+                          </select>
+                        </form>
+                      </div>
+                </div>
+            </nav>
+            
+        </header>
+        <main class="container-fluid center">
+            <h1>IO Utility Functions<br><small>Use our IO functions and operators to do input and output over 40 times faster* and handle int128.</small></h1>
+            
+            <h5>Example</h5>
+            <p class="alert alert-info">New to C++? Check out <a href="http://lucasdu-lab.github.io/tutorial/index.html" target="_blank">our tutorial</a>!</p>
+            <iframe src="https://coliru.stacked-crooked.com/a/3dda0bdfde4d5847" width="80%" height="50%"></iframe></iframe>
+            <h5>fread+fwrite.h</h5>
+            <p>Lists of functions:</p>
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-danger">void init_output(void): must be called at the beginning of the program, it ensures the output is flushed at the end</li>
+                <li class="list-group-item">int read_int(void): used to read 1 32-bit integer</li>
+                <li class="list-group-item">char next_char(void): used to read 1 byte of data (a char)</li>
+                <li class="list-group-item">void write_char(char): used to write a single character to the output buffer</li>
+                <li class="list-group-item">void write_int(int): used to write a 32-bit integer and a newline (can be customized) to the output buffer</li>
+                <li class="list-group-item">void flush_out(void): used to flush the output buffer to the screen</li>
+            </ul>
+            <h5 class="mt-3">int128.h</h5>
+            <p>Lists of functions and operators:</p>
+            <ul class="list-group">
+                <li class="list-group-item">operator&lt;&lt;: writes one __int128 type to the output stream specified. Example: <code>out&lt;&lt;myint128variable;</code></li>
+                <li class="list-group-item">operator>>: reads one __int128 type variable from the input stream specified. Example: <code>cin>>int128;</code></li>
+                <li class="list-group-item">__int128 read(void): reads one __int128 type variable from <code>std::cin</code> using <code>getchar()</code>, it is faster than the operator above, but limited to reading from standard input.</li>
+                <li class="list-group-item">void print(__int128 x): writes one __int128 type variable to standard output using <code>putchar()</code>. It is also faster than the operator but limited to standard output.</li>
+                <li class="list-group-item">bool cmp(__int128,__int128): the compare function used in sorting __int128 arrays in descending order</li>
+
+            </ul>
+        </main>
+        <footer class="container-fluid mt-3">
+            <p class="text-center">Copyright &copy; 2024 - Contest Templates</p>
+            <p class="text-center"><small>* Compared with <code>std::cin</code>, <code>std::cout</code> and <code>std::endl</code>. Reference: <a href="https://usaco.guide/general/fast-io">USACO Guide</a></small></p>
+        </footer>
+        <script src="darkmode.js">
+        </script>
+    </body>
+</html>
+<!-- pages built with Bootstrap 5 -->
