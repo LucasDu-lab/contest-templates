@@ -6,10 +6,12 @@ A collection of useful C++ templates for competitive programming and algorithmic
 
 - **Data Structures**: Implementations of essential data structures such as:
   - Disjoint Set Union (Union-Find)
+  - Matrices
 
 - **Algorithms**: Common algorithms for various problem-solving scenarios, including:
   - Extended Euclidean Algorithm (exgcd)
   - Algorithms for Prime Factorization and sieve algorithms
+  - Gaussion Elimination
 
 - **Utilities**: Handy utility functions for:
   - Input/Output operations for int128
