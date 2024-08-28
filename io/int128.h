@@ -1,7 +1,7 @@
 #include<iostream>
 #include<sstream>
 using namespace std;
-istream& operator<<(istream& in,  __int128 &a){
+istream& operator>>(istream& in,  __int128 &a){
     string s;
     in >> s;
     __int128 res = 0;
