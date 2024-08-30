@@ -48,4 +48,5 @@ Refer to the documentation and individual header files for more information.
 Contributions are welcome! If you have suggestions for improvements or additional templates, please create a discussion, create a pull request or open an issue.
 ## License
 This project is licensed under the MIT License. See the [LICENSE](https://github.com/LucasDu-lab/contest-templates/blob/main/LICENSE) file for details.          
- Link to repository: <https://github.com/LucasDu-lab/contest-templates>
+ Link to repository: <https://github.com/LucasDu-lab/contest-templates>     
+ Link to documentation: <https://lucasdu-lab.github.io/contest-templates/documentation/welcome.html>
