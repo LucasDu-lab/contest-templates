@@ -50,3 +50,4 @@ Contributions are welcome! If you have suggestions for improvements or additiona
 This project is licensed under the MIT License. See the [LICENSE](https://github.com/LucasDu-lab/contest-templates/blob/main/LICENSE) file for details.          
  Link to repository: <https://github.com/LucasDu-lab/contest-templates>     
  Link to documentation: <https://lucasdu-lab.github.io/contest-templates/documentation/welcome.html>
+ Join Discord: <https://discord.gg/YRdmxAGu>
