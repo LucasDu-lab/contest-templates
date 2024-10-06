@@ -20,4 +20,4 @@ class fastStack{
         else throw std::runtime_error("Segmentation fault, stack is empty");
     }
     bool empty(){ return stk.empty(); }
-}
+};
