@@ -138,3 +138,4 @@ std::ostream& operator<<(std::ostream& out, const std::tuple<Types...>& value) {
     return out << ')';
 }
 #define dbg(x) cerr<<(__LINE__)<<#x<<'='<<x<<'\n';
+#define err(...) cerr<<(__LINE__)<<format(__VA_ARGS__)<<"\n";;

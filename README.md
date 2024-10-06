@@ -23,7 +23,7 @@ A collection of useful C++ templates for competitive programming and algorithmic
 
 ### Prerequisites
 
-- A C++ compiler (e.g., g++, clang++)
+- A C++ compiler (e.g., g++, clang++), instalation procedure can be found at <https://code.visualstudio.com/docs/cpp/config-mingw#_installing-the-mingww64-toolchain>
 - A C++ integrated development environment (e.g., Visual Studio Code, Visual Studio, Code::Blocks, Sublime Text, etc.)
 - CMake for building the project (optional)
 
