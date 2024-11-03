@@ -1,27 +1,41 @@
 #include<iostream>
 #include<sstream>
+#include<vector>
+#include<algorithm>
 using namespace std;
 istream& operator>>(istream& in,  __int128 &a){
     string s;
     in >> s;
-    __int128 res = 0;
-    for(int i = s.size() - 1; i >= (s[0]=='-'?1:0); i--){
-        res = res * 10 + (s[i] - '0');
+    __int128 res = 0, place = 1;
+    for(int i = s.size() - 1; i >= (s[0]=='-'?1:0); i--,place*=10){
+        res += place*(s[i] - '0');
     }
     if(s[0] == '-'){
         res = -res;
-        s = s.substr(1);
+        //s = s.substr(1);
     }
+    a=res;
     return in;
 }
 ostream& operator<<(ostream& out, __int128 a){
-    if(a < 0){
+  if(a==0){
+    return out<<0;
+  }
+    /*if(a < 0){
         out << '-';
         a = -a;
     }
     stringstream ss;
     ss << a;
-    return out << ss.str();
+    return out << ss.str();*/
+    vector<int>num;
+    while(a){
+        num.push_back(a%10);
+        a/=10;
+    }
+    reverse(num.begin(),num.end());
+    for(auto u:num)out<<u;
+    return out;
 }
 /*
 __int128 read() {
@@ -47,3 +61,12 @@ void print(__int128 x) {
 }
 bool cmp(__int128 x, __int128 y) { return x > y; }
 */
+int main(){
+    __int128 a,b;
+    cin>>a>>b;
+    __int128 c=a+b;
+    cout<<c<<endl;
+    //__int128 a=read(),b=read();
+    //print(a+b);
+    return 0;
+}
