@@ -21,3 +21,4 @@ class fastStack{
     }
     bool empty(){ return stk.empty(); }
 };
+//verification: https://www.luogu.com.cn/record/186648505
