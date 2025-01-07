@@ -17,6 +17,7 @@ inline namespace Input {
         }
         return buf[pos++];
     }
+    //adding #define int long long will make this function read in a long long, but remember to change the function's name
 
     int read_int() {
         int x;
@@ -59,4 +60,9 @@ inline namespace Output {
 
     // auto-flush output when program exits
     void init_output() { assert(atexit(flush_out) == 0); }
+    void write_string(string &x){
+        for(char c:x) write_char(c);
+        write_char('\n');
+    }
 }
+//note: mixing this with regular cin/cout or scanf/printf will cause undefined behavior
