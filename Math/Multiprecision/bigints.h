@@ -101,20 +101,17 @@ struct bign{
     }
     bign operator *(const bign b) {
       bign c;  
-      c.len=b.len;  
-      for (int i = 0; i <b.len+len; ++i) {
-        for (int j = 0; j <= i; ++j) c.nums[i] += nums[j] * b.nums[i - j];
-    
-        if (c.nums[i] >= 10) {
-          c.nums[i + 1] += c.nums[i] / 10;
-          c.nums[i] %= 10;
-          c.len++;
-        }
+      c.len=len+b.len;  
+      for(int i=0;i<len;i++){
+          for(int j=0;j<b.len;j++){
+              c.nums[i+j]+=nums[i]*b.nums[j];
+          }
       }
-      while(c.nums[c.len-1]==0&&c.len>1){
-          //c.nums.pop_back();
-          c.len--;
+      for(int i=0;i<c.len;i++){
+          c.nums[i+1]+=c.nums[i]/10;
+          c.nums[i]%=10;
       }
+      while(c.nums[c.len-1]==0&&c.len>1)c.len--;
       return c;
     }
     bign operator *=(const bign b){
