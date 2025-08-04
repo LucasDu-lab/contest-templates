@@ -61,12 +61,3 @@ void print(__int128 x) {
 }
 bool cmp(__int128 x, __int128 y) { return x > y; }
 */
-int main(){
-    __int128 a,b;
-    cin>>a>>b;
-    __int128 c=a+b;
-    cout<<c<<endl;
-    //__int128 a=read(),b=read();
-    //print(a+b);
-    return 0;
-}
